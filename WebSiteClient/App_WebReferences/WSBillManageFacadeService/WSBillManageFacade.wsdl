@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="urn:client.billmanagefacade" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" xmlns:intf="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" targetNamespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade">
+      <xsd:import namespace="urn:client.billmanagefacade" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:client.billmanagefacade">
+      <xsd:import namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="WSInvokeException">
+        <xsd:sequence />
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="doManufactureRecBillRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getInventoryResponse">
+    <wsdl:part name="getInventoryReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doMoveInWarehsBillResponse">
+    <wsdl:part name="doMoveInWarehsBillReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doMoveInWarehsBillRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doOtherInWarehsResponse">
+    <wsdl:part name="doOtherInWarehsReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doPostRequisitionResponse">
+    <wsdl:part name="doPostRequisitionReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doOtherIssueRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doMoveIssueBillRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doMaterialRequestRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doPostRequisitionRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getInventoryRequest">
+    <wsdl:part name="param" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doOtherInWarehsRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doOtherIssueResponse">
+    <wsdl:part name="doOtherIssueReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doMoveLocationBillRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doMaterialRequestResponse">
+    <wsdl:part name="doMaterialRequestReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doManufactureRecBillResponse">
+    <wsdl:part name="doManufactureRecBillReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="WSInvokeException">
+    <wsdl:part name="fault" type="tns1:WSInvokeException" />
+  </wsdl:message>
+  <wsdl:message name="doMoveLocationBillResponse">
+    <wsdl:part name="doMoveLocationBillReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doMoveIssueBillResponse">
+    <wsdl:part name="doMoveIssueBillReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="doPurReceivalBillRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="operateType" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="doPurReceivalBillResponse">
+    <wsdl:part name="doPurReceivalBillReturn" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:portType name="WSBillManageFacadeSrvProxy">
+    <wsdl:operation name="doOtherIssue" parameterOrder="id operateType">
+      <wsdl:input name="doOtherIssueRequest" message="intf:doOtherIssueRequest" />
+      <wsdl:output name="doOtherIssueResponse" message="intf:doOtherIssueResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doMaterialRequest" parameterOrder="id operateType">
+      <wsdl:input name="doMaterialRequestRequest" message="intf:doMaterialRequestRequest" />
+      <wsdl:output name="doMaterialRequestResponse" message="intf:doMaterialRequestResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doPostRequisition" parameterOrder="id operateType">
+      <wsdl:input name="doPostRequisitionRequest" message="intf:doPostRequisitionRequest" />
+      <wsdl:output name="doPostRequisitionResponse" message="intf:doPostRequisitionResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doMoveInWarehsBill" parameterOrder="id operateType">
+      <wsdl:input name="doMoveInWarehsBillRequest" message="intf:doMoveInWarehsBillRequest" />
+      <wsdl:output name="doMoveInWarehsBillResponse" message="intf:doMoveInWarehsBillResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doManufactureRecBill" parameterOrder="id operateType">
+      <wsdl:input name="doManufactureRecBillRequest" message="intf:doManufactureRecBillRequest" />
+      <wsdl:output name="doManufactureRecBillResponse" message="intf:doManufactureRecBillResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doPurReceivalBill" parameterOrder="id operateType">
+      <wsdl:input name="doPurReceivalBillRequest" message="intf:doPurReceivalBillRequest" />
+      <wsdl:output name="doPurReceivalBillResponse" message="intf:doPurReceivalBillResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doMoveIssueBill" parameterOrder="id operateType">
+      <wsdl:input name="doMoveIssueBillRequest" message="intf:doMoveIssueBillRequest" />
+      <wsdl:output name="doMoveIssueBillResponse" message="intf:doMoveIssueBillResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="getInventory" parameterOrder="param">
+      <wsdl:input name="getInventoryRequest" message="intf:getInventoryRequest" />
+      <wsdl:output name="getInventoryResponse" message="intf:getInventoryResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doOtherInWarehs" parameterOrder="id operateType">
+      <wsdl:input name="doOtherInWarehsRequest" message="intf:doOtherInWarehsRequest" />
+      <wsdl:output name="doOtherInWarehsResponse" message="intf:doOtherInWarehsResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+    <wsdl:operation name="doMoveLocationBill" parameterOrder="id operateType">
+      <wsdl:input name="doMoveLocationBillRequest" message="intf:doMoveLocationBillRequest" />
+      <wsdl:output name="doMoveLocationBillResponse" message="intf:doMoveLocationBillResponse" />
+      <wsdl:fault name="WSInvokeException" message="intf:WSInvokeException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSBillManageFacadeSoapBinding" type="intf:WSBillManageFacadeSrvProxy">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="doOtherIssue">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doOtherIssueRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doOtherIssueResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doMaterialRequest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doMaterialRequestRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doMaterialRequestResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doPostRequisition">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doPostRequisitionRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doPostRequisitionResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doMoveInWarehsBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doMoveInWarehsBillRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doMoveInWarehsBillResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doManufactureRecBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doManufactureRecBillRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doManufactureRecBillResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doPurReceivalBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doPurReceivalBillRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doPurReceivalBillResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doMoveIssueBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doMoveIssueBillRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doMoveIssueBillResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInventory">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getInventoryRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getInventoryResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherInWarehs">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doOtherInWarehsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doOtherInWarehsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doMoveLocationBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doMoveLocationBillRequest">
+        <wsdlsoap:body use="encoded" namespace="http://webservice.app.common.scm.eas.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="doMoveLocationBillResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="WSInvokeException">
+        <wsdlsoap:fault use="encoded" name="WSInvokeException" namespace="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSBillManageFacadeSrvProxyService">
+    <wsdl:port name="WSBillManageFacade" binding="intf:WSBillManageFacadeSoapBinding">
+      <wsdlsoap:address location="http://192.168.0.160:6888/ormrpc/services/WSBillManageFacade" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://localhost:1660/UserManageService.svc/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://localhost:1660/UserManageService.svc/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://localhost:1660/UserManageService.svc/Imports">
+      <xsd:import schemaLocation="http://wangdonghao.invengo.com/grain/UserManageService.svc?xsd=xsd0" namespace="http://localhost:1660/UserManageService.svc/" />
+      <xsd:import schemaLocation="http://wangdonghao.invengo.com/grain/UserManageService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://wangdonghao.invengo.com/grain/UserManageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Invengo.RiceManangeServices.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManageSystemService_AddUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_AddUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UpdateUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UpdateUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_DeleteUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_DeleteUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_GetUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_GetUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_HasWebSiteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasWebSiteRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_HasWebSiteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasWebSiteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UserChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_UserChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_GetUserInfoByJobNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByJobNo" />
+  </wsdl:message>
+  <wsdl:message name="IUserManageSystemService_GetUserInfoByJobNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByJobNoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManageSystemService">
+    <wsdl:operation name="AddUserGroup">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/AddUserGroup" message="tns:IUserManageSystemService_AddUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/AddUserGroupResponse" message="tns:IUserManageSystemService_AddUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UpdateUserGroup" message="tns:IUserManageSystemService_UpdateUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UpdateUserGroupResponse" message="tns:IUserManageSystemService_UpdateUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/DeleteUserGroup" message="tns:IUserManageSystemService_DeleteUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/DeleteUserGroupResponse" message="tns:IUserManageSystemService_DeleteUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroup">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/GetUserGroup" message="tns:IUserManageSystemService_GetUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/GetUserGroupResponse" message="tns:IUserManageSystemService_GetUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasWebSiteRole">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/HasWebSiteRole" message="tns:IUserManageSystemService_HasWebSiteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/HasWebSiteRoleResponse" message="tns:IUserManageSystemService_HasWebSiteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/AddUser" message="tns:IUserManageSystemService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/AddUserResponse" message="tns:IUserManageSystemService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UpdateUser" message="tns:IUserManageSystemService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UpdateUserResponse" message="tns:IUserManageSystemService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/DeleteUser" message="tns:IUserManageSystemService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/DeleteUserResponse" message="tns:IUserManageSystemService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/GetUser" message="tns:IUserManageSystemService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/GetUserResponse" message="tns:IUserManageSystemService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UserLogin" message="tns:IUserManageSystemService_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UserLoginResponse" message="tns:IUserManageSystemService_UserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UserChangePassword" message="tns:IUserManageSystemService_UserChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/UserChangePasswordResponse" message="tns:IUserManageSystemService_UserChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoByJobNo">
+      <wsdl:input wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/GetUserInfoByJobNo" message="tns:IUserManageSystemService_GetUserInfoByJobNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://localhost:1660/UserManageService.svc/IUserManageSystemService/GetUserInfoByJobNoResponse" message="tns:IUserManageSystemService_GetUserInfoByJobNo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

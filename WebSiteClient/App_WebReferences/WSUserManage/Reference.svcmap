@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="14b3dbfa-7e56-4cb9-9f81-639a125e1f1b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.160/grain/UserManageService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserManageService.xsd" MetadataType="Schema" ID="e77f5c02-f87a-4225-bb35-56f210b9a96b" SourceId="1" SourceUrl="http://wangdonghao.invengo.com/grain/UserManageService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserManageService1.xsd" MetadataType="Schema" ID="edd751d2-7a9a-4ba6-8c62-91e82d3051fb" SourceId="1" SourceUrl="http://wangdonghao.invengo.com/grain/UserManageService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserManageSystemService.wsdl" MetadataType="Wsdl" ID="e8d9aed4-ef05-443c-b027-6e4904ae0035" SourceId="1" SourceUrl="http://wangdonghao.invengo.com/grain/UserManageService.svc?wsdl" />
+    <MetadataFile FileName="UserManageService.wsdl" MetadataType="Wsdl" ID="21e9582b-5ce1-4685-a37d-3402ab93ba08" SourceId="1" SourceUrl="http://wangdonghao.invengo.com/grain/UserManageService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="UserManageService.disco" MetadataType="Disco" ID="8851a839-ede2-4205-bd4d-e814b0fbf94d" SourceId="1" SourceUrl="http://wangdonghao.invengo.com/grain/UserManageService.svc?disco" />
+    <MetadataFile FileName="UserManageService2.xsd" MetadataType="Schema" ID="d77d2a27-cdf6-4e4b-b00d-896e71b8c683" SourceId="1" SourceUrl="http://wangdonghao.invengo.com/grain/UserManageService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

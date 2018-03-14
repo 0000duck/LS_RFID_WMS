@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MyMaster.master.cs" Inherits="MyMaster" %>
+
+<%@ Register Src="UserControl/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link type="text/css" href="Css/Common.css" rel="Stylesheet" />
+
+    <script language="javascript" type="text/javascript">
+        function OnFocus(obj) {
+            obj.style.backgroundColor = '#ffffcc';
+        }
+
+        function OnBlur(obj) {
+            obj.style.backgroundColor = '#ffffff';
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true"
+        runat="server">
+    </asp:ScriptManager>
+    <div id="divcontenttop">
+        <div id="divuser">
+            <uc1:UserInfo ID="UserInfo1" runat="server" />
+        </div>
+    </div>
+    <div id="divcontent">
+        <div id="divcontentall">
+            <div id="titleHeader">
+                <div id="title">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="../Images/navigation.png" alt="" />
+                            </td>
+                            <td>
+                                <asp:ContentPlaceHolder ID="titleName" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="divsearch">
+                <div>
+                    <img src="../images/searchlogo.png" alt="" /><img src="../images/condition.jpg" alt="" /></div>
+                <div>
+                    <asp:ContentPlaceHolder ID="head" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <br />
+                </div>
+                <div>
+                    <img src="../images/resultlogo.png" alt="" /><img src="../images/result.jpg" alt="" /></div>
+            </div>
+            <div style="background-color: #006699; height: 1px; border: 0px; width: 100%;">
+            </div>
+            <div id="divmaincontent">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

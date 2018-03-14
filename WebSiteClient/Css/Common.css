@@ -1,0 +1,393 @@
+﻿body
+{
+	font-size: 12px;
+	font-family:微软雅黑;
+	text-decoration: none;
+    line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+a:link,a:visited
+{
+    color: #084684;
+    text-decoration: none;
+}
+a:hover,a:active
+{
+    color: #FF6600;
+    text-decoration: none;
+}
+.linetable 
+{
+    border-collapse:collapse; 
+    border:solid #999; 
+    border-width:1px 0 0 1px; 
+    text-align:center;
+}
+.linetable th,.linetable td 
+{
+	border:solid #999;
+	border-width:0 1px 1px 0;
+	padding:2px;
+}
+.gridHeader
+{
+	background-color:#006699;
+	color:#FFFFFF;
+	text-align:center;
+}
+.gridRow
+{
+	background-color:#DBF5FE;
+	text-align:center;
+}
+.gridArow
+{
+	background-color:#C0DFFE;
+	text-align:center;
+}
+.error
+{
+	background-image: url("../images/error.png");
+	width:561px;
+	height:244px;
+	margin-top: 120px;
+}
+.error_msg_div
+{
+	position:relative;
+	padding-top: 100px;
+	padding-left:50px;
+	padding-right:10px;
+}
+.error_msg
+{
+	color:#FFFFFF;
+	font-size:32px;
+	font-weight:bold;
+}
+.content
+{	
+	border: 1px solid #165ea9;
+	padding: 10px 10px 10px 20px;
+	line-height: 1.5em;
+	font-weight: bold;
+	text-align:left;
+}
+.barheader
+{
+	height: 25px;
+	padding: 5px 0px 0px 20px;
+	background-color:#006699;
+	color: #FFF;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align:left;
+}
+.page_nav_textbox
+{
+	width:30px;
+}
+.divtdcontent
+{
+	height:410px;
+	overflow:auto;
+	text-align:center;
+	scrollbar-face-color: #006699;
+    scrollbar-shadow-color: #006699;
+    scrollbar-highlight-color: #006699; 
+    scrollbar-3dlight-color: #ffffff;
+    scrollbar-darkshadow-color: #ffffff; 
+    scrollbar-track-color: #ffffff; 
+    scrollbar-arrow-color: #ffffff;
+}
+.divpage
+{
+	text-align:left;
+	padding-left:5px;
+}
+.diveditall
+{
+	width: 96%; 
+	text-align: center; 
+	padding-top: 40px;
+}
+.comment
+{
+    display : none;
+    position: absolute;
+    left:250px;
+    top:80px;
+    width:800px;
+    height:560px;
+    border: 1px solid #165ea9;
+    background-color: #FFFFFF;
+    z-index: 0; 
+}
+.textbox
+{
+    border:solid 1px #c9c7ba;
+}
+.textboxselected
+{
+    border:solid 1px #c9c7ba;
+    background-color:#ffffcc;
+}
+.textboxdate
+{
+    border:solid 1px #c9c7ba;
+    background-color:#f5f4ea;
+}
+.divwindowscontent
+{
+	padding:10px;
+	overflow:auto;
+	height:500px;
+    scrollbar-face-color: #165ea9; 
+    scrollbar-shadow-color: #165ea9; 
+    scrollbar-highlight-color: #165ea9;
+    scrollbar-3dlight-color: #ffffff; 
+    scrollbar-darkshadow-color: #ffffff; 
+    scrollbar-track-color: #ffffff;
+    scrollbar-arrow-color: #ffffff;
+}
+.window
+{
+	position: absolute; 
+	border: 2px solid #165ea9;
+    background-color: #FFFFFF; 
+    display:none;
+}
+.windowtitle
+{
+	cursor: move; 
+	background-color: #165ea9; 
+	width: 100%; 
+	height: 25px; 
+	color:#FFFFFF;
+	padding:5px 0px 0px 0px;
+}
+.titlename
+{
+	float: left; 
+	padding-left: 5px;
+	font-weight:bold;
+}
+.windowclose
+{
+	float: right; 
+	height: 30px; 
+	width: 30px; 
+	cursor: pointer;
+}
+.windowcontent
+{
+	padding: 10px; 
+    overflow: auto;
+}
+.dropShadowPanel 
+{
+	background-color:#165ea9;
+	color:white;
+}
+.dropShadowPanel a
+{
+	color:White;
+}
+.modalBackground {
+	background-color:black;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: #006699;
+    color: #FF6600;
+}
+.MyCalendar .ajax__calendar_other .ajax__calendar_day,
+.MyCalendar .ajax__calendar_other .ajax__calendar_year {
+    color: #000000;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_month,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_year {
+    color: #000000;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day,
+.MyCalendar .ajax__calendar_active .ajax__calendar_month,
+.MyCalendar .ajax__calendar_active .ajax__calendar_year {
+    color: #000000;
+    font-weight:bold;
+}
+
+
+
+/*
+----------------------------------------顶部Top-------------------------------------
+*/
+#divtop
+{
+	background-color: #336aaa; 
+	width: 100%; 
+	height: 100px;
+}
+#divtop #divleft
+{
+	background-image: url(../images/top1.jpg); 
+	width: 639px; 
+	height: 100px;
+    float: left;
+}
+#divtop #divright
+{
+	background-image: url(../images/top3.jpg); 
+	width: 218px; 
+	height: 100px;
+    float: right;
+}
+/*
+------------------------------------------------------------------------------------
+*/
+
+
+/*
+----------------------------------------中间内容-------------------------------------
+*/
+#divcontenttop
+{
+	background-image: url(../images/right.jpg); 
+	width: 100%;
+    height: 22px;
+}
+#divcontenttop #divuser
+{
+	padding:0px 7px 0px 0px;
+	float:right;
+}
+#divcontent
+{
+	padding:10px 10px 0px 10px;
+}
+#divcontent #divcontentall
+{
+	border: 1px solid #165ea9;
+}
+#divcontent #divcontentall #titleHeader
+{
+	width:100%;	
+	height:30px;
+	background-image: url(../images/bg-menu-main.png);
+	background-repeat:repeat-x;	
+}
+#divcontent #divcontentall #titleHeader #title
+{
+	height:30px;
+	color:#FFF;
+	font-weight:bold;
+	padding:2px 0px 0px 5px;
+	font-size:14px;
+}
+#divcontent #divcontentall #divsearch
+{
+	padding:10px 0px 5px 10px;
+}
+#divcontent #divcontentall #divmaincontent
+{
+	overflow: auto; 
+	height: 445px; 
+	padding: 10px 10px 0px 10px; 
+	scrollbar-face-color: #165ea9;
+    scrollbar-shadow-color: #165ea9; 
+    scrollbar-highlight-color: #165ea9; 
+    scrollbar-3dlight-color: #ffffff;
+    scrollbar-darkshadow-color: #ffffff; 
+    scrollbar-track-color: #ffffff; 
+    scrollbar-arrow-color: #ffffff;
+}
+#divcontent #divcontentall #divmaincontentsecond
+{
+	overflow: auto; 
+	height: 580px; 
+	padding: 10px 0px 0px 10px; 
+	scrollbar-face-color: #165ea9;
+    scrollbar-shadow-color: #165ea9; 
+    scrollbar-highlight-color: #165ea9; 
+    scrollbar-3dlight-color: #ffffff;
+    scrollbar-darkshadow-color: #ffffff; 
+    scrollbar-track-color: #FFFFFF; 
+    scrollbar-arrow-color: #ffffff;
+}
+#table_main_outer
+{
+	width:98%;
+}
+#table_main_gridview
+{
+	width:100%;
+}
+#page_nav_td
+{
+	text-align:left;
+    padding-top :10px;
+}
+#shadow
+{
+	visibility: hidden; 
+	position: absolute; 
+	top: 1px; 
+	left: 1px;
+    width: 1px; 
+    height: 1px; 
+    z-index: 1; 
+    background-color: black; 
+    filter: alpha(opacity=60);
+}
+#divtasttime
+{
+	height:30px; 
+	width:260px;
+	background-color:#006699; 
+	color:#FFFFFF; 
+	font-size:14px; 
+	font-weight:bold;
+	padding:10px 0px 0px 0px;
+}
+#divcontentmenu
+{
+	width: 210px; 
+	height: 570px; 
+	float: left;
+	overflow: auto; 
+	scrollbar-face-color: #006699;
+    scrollbar-shadow-color: #006699; 
+    scrollbar-highlight-color: #006699; 
+    scrollbar-3dlight-color: #ffffff;
+    scrollbar-darkshadow-color: #ffffff; 
+    scrollbar-track-color: #ffffff; 
+    scrollbar-arrow-color: #ffffff
+}
+/*
+------------------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------底部Bottom-------------------------------------
+*/
+#divbottom
+{
+	 background-color:#2c5d98; 
+	 width: 100%; 
+	 height: 32px;
+}
+#divbottom #divtext
+{
+	width: 310px; 
+	color:#92caff; 
+	font-weight:bold; 
+	padding-top:5px;
+    float: right;
+}
+/*
+------------------------------------------------------------------------------------
+*/

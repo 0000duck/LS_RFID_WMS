@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="urn:client" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://192.168.0.160:6888/ormrpc/services/EASLogin" xmlns:intf="http://192.168.0.160:6888/ormrpc/services/EASLogin" targetNamespace="http://192.168.0.160:6888/ormrpc/services/EASLogin" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:client">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="WSContext">
+        <xsd:sequence>
+          <xsd:element name="dbType" type="xsd:int" />
+          <xsd:element name="dcName" nillable="true" type="xsd:string" />
+          <xsd:element name="password" nillable="true" type="xsd:string" />
+          <xsd:element name="sessionId" nillable="true" type="xsd:string" />
+          <xsd:element name="slnName" nillable="true" type="xsd:string" />
+          <xsd:element name="userName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="loginResponse1">
+    <wsdl:part name="loginReturn" type="tns1:WSContext" />
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="loginReturn" type="tns1:WSContext" />
+  </wsdl:message>
+  <wsdl:message name="loginRequest">
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="slnName" type="xsd:string" />
+    <wsdl:part name="dcName" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+    <wsdl:part name="dbType" type="xsd:int" />
+    <wsdl:part name="authPattern" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="loginRequest1">
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="slnName" type="xsd:string" />
+    <wsdl:part name="dcName" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+    <wsdl:part name="dbType" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:portType name="EASLoginProxy">
+    <wsdl:operation name="login" parameterOrder="userName password slnName dcName language dbType authPattern">
+      <wsdl:input name="loginRequest" message="intf:loginRequest" />
+      <wsdl:output name="loginResponse" message="intf:loginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="login" parameterOrder="userName password slnName dcName language dbType">
+      <wsdl:input name="loginRequest1" message="intf:loginRequest1" />
+      <wsdl:output name="loginResponse1" message="intf:loginResponse1" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EASLoginSoapBinding" type="intf:EASLoginProxy">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loginRequest">
+        <wsdlsoap:body use="encoded" namespace="http://login.webservice.bos.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/EASLogin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loginRequest1">
+        <wsdlsoap:body use="encoded" namespace="http://login.webservice.bos.kingdee.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="loginResponse1">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.0.160:6888/ormrpc/services/EASLogin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EASLoginProxyService">
+    <wsdl:port name="EASLogin" binding="intf:EASLoginSoapBinding">
+      <wsdlsoap:address location="http://192.168.0.160:6888/ormrpc/services/EASLogin" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
